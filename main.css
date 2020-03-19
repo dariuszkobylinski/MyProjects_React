@@ -1,0 +1,28 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #F5F5F5;
+  min-width: 400px;
+  /*background-image: url("./img/rain-863339_1920.jpg");*/
+  background-size: cover;
+
+}
+/*.container {*/
+/*  height: 1000px;*/
+/*}*/
+.con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box_image_slider {
+  width: calc(100% - 0px);
+  height: 450px;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0.8;
+}
+
+.visible {
+  visibility: visible;
+}
