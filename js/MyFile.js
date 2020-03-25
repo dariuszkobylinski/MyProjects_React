@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import "../normalize.css";
-import "../main.css";
-
+import "../main.scss";
+// import "../main.css";
+//
 import "../slider_manager";
 
 console.log(window.location.origin);
