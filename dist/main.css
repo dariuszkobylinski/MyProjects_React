@@ -1,0 +1,19 @@
+body {
+  font-family: 'Arial', sans-serif;
+  min-width: 325px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.box_image_slider {
+  width: calc(100% - 0px);
+  height: 310px;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0.8; }
+
+.visible {
+  visibility: visible; }
+
