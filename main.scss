@@ -10,11 +10,12 @@ $padding_main: 10px;
   border-radius: 2px;
   max-width: 100%;
 }
-
+#app {
+  width: 100%;
+}
 body {
   font-family: 'Arial', sans-serif;
-  width: 100%;
- // min-width: 325px;
+  min-width: 325px;
   background-color: white;
   display: flex;
   flex-direction: column;
