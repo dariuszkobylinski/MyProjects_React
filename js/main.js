@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(formInputField);
         console.log("dziłaam");
         if (formInputField.children[1].value === "" || formInputField.children[2].value === "" || formInputField.children[3].value === "" || formInputField.children[4].value === "") {
-            formInputField.children[6].style.visibility = "visible";
+            // formInputField.children[6].style.visibility = "visible";
+            error.push("Pole email musi zawierać znak @ i co najmniej 3 znaki");
             console.log("brak");
         } else {
             formInputField.children[6].style.visibility = "hidden";
