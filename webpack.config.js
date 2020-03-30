@@ -10,7 +10,7 @@ module.exports = {
   watch: true,
   mode: 'development',
   entry: {
-    main: path.join(__dirname, 'js', 'index.js'),
+    main: path.join(__dirname, 'js', 'MyFile.js'),
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -62,7 +62,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'index.html'),
+      template: path.join(__dirname, 'kontakt.html'),
       hash: true
     }),
     new MiniCssExtractPlugin({filename: "[name].css", chunkFilename: "[id].css"})
