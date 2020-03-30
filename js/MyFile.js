@@ -58,7 +58,7 @@ const Header = () => {
                     </li>
                     <li className="classLink">
                         <a href="../index.html" className="classLinkHref" id="keyPageWord"
-                           target="_parent">Oferta</a>
+                           target="_parent" style={{color:"darkorange"}}>Oferta</a>
                     </li>
                     <li className="classLink">
                         <a href="../cennik.html" className="classLinkHref" target="_parent">Cennik</a>

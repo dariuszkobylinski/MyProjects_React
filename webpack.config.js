@@ -10,7 +10,7 @@ module.exports = {
   watch: true,
   mode: 'development',
   entry: {
-    main: path.join(__dirname, 'js', 'MyFile.js'),
+    main: path.join(__dirname, 'js', 'index.js'),
   },
   output: {
     path: path.join(__dirname, 'dist'),
