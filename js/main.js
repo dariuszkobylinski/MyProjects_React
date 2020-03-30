@@ -13,20 +13,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    let btnSendEmail = document.querySelector(".classBtn_footer");
-    let formInputField = document.querySelector(".message-footer");
-    btnSendEmail.addEventListener("click", () => {
-        console.log(formInputField);
-        console.log("dziłaam");
-        if (formInputField.children[1].value === "" || formInputField.children[2].value === "" || formInputField.children[3].value === "" || formInputField.children[4].value === "") {
-            // formInputField.children[6].style.visibility = "visible";
-            error.push("Pole email musi zawierać znak @ i co najmniej 3 znaki");
-            console.log("brak");
-        } else {
-            formInputField.children[6].style.visibility = "hidden";
-
-        }
-    });
+    // let btnSendEmail = document.querySelector(".classBtn_footer");
+    // let formInputField = document.querySelector(".message-footer");
+    // btnSendEmail.addEventListener("click", () => {
+    //     console.log(formInputField);
+    //     console.log("dziłaam");
+    //     if (formInputField.children[1].value === "" || formInputField.children[2].value === "" || formInputField.children[3].value === "" || formInputField.children[4].value === "") {
+    //         // formInputField.children[6].style.visibility = "visible";
+    //         error.push("Pole email musi zawierać znak @ i co najmniej 3 znaki");
+    //         console.log("brak");
+    //     } else {
+    //         formInputField.children[6].style.visibility = "hidden";
+    //
+    //     }
+    // });
 
     let textContact = document.querySelector(".contact");
     setInterval(() => {
