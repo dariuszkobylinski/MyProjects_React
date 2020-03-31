@@ -2,10 +2,9 @@ import React,{Component, useState, useEffect} from "react";
 import ReactDOM from "react-dom";
 import "../main.scss";
 import "../js/slider_manager";
-import "../js/kontakt";
+// import "../js/kontakt";
 import "../js/main";
 import "../normalize.css";
-
 
 const Header = () => {
     return (
@@ -73,19 +72,39 @@ const Header = () => {
         )
 };
 
-const Footer = () => {
+class Footer extends React.Component {
+    // const myChange = () => {
+    //     let z ="";
+    //     if (window.innerWidth<"400") {
+    //         this.st
+    //     }
+    //
+    // };
+    // const myResize = () => {
+    //         window.addEventListener("resize", myChange)
+    //     };
+    //     myResize();
+
+    constructor() {
+    super();
+    this.state = {
+        fontSize: "26",
+        z:"0"
+    }
+    }
+    render() {
     return (
         <>
-                <div className="classContact">
+                <div  className="classContact">
                     <div className="classContactDetail">
-                        <p className="pClassContactDetail">MD Investments Monika Kobylińska</p>
+                        <p className="pClassContactDetail" style={{fontSize:this.state.fontSize+"px"}}>MD Investments Monika Kobylińska</p>
                         <p className="pClassContactDetail">ul. M. Drzymały 18</p>
                         <p className="pClassContactDetail">02-495 Warszawa</p>
-                        <p className="pClassContactDetail">NIP: 849 111 11 11</p>
-                        <p className="pClassContactDetail">Telefon kontaktowy: <br></br>+48 518 836 336</p>
+                        <p className="pClassContactDetail" style={{fontSize:this.state.fontSize+"px"}}>NIP: 849 111 11 11</p>
+                        <p className="pClassContactDetail" style={{fontSize:this.state.fontSize+"px"}}>Telefon kontaktowy: <br></br>+48 518 836 336</p>
                         <p className="pClassContactDetail">Poniedziałek - Piątek</p>
                         <p className="pClassContactDetail">9:00 - 18:00</p>
-                        <p className="pClassContactDetail">email: mdinvestments2018@gmail.com</p>
+                        <p className="pClassContactDetail" style={{fontSize:parseInt(this.state.fontSize)+parseInt(this.state.z)+"px"}}>email: mdinvestments2018@gmail.com</p>
                     </div>
                 </div>
             <div className="footer_summary">
@@ -96,7 +115,8 @@ const Footer = () => {
             </div>
         </>
     )
-};
+}
+}
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -153,7 +173,7 @@ const ContactForm = () => {
                 <input type="text" name="temat" className="classTitle" placeholder="Tytuł" value={formData.temat} onChange={handleChange}/>
                 <textarea rows="8" name="message" className="classMessage" placeholder="Tekst wiadomości" value={formData.message} onChange={handleChange}/>
                 <button className="classBtn_footer" type="submit">Wyślij</button>
-            <ul className="classErrorMessage" style={{textDecoration:"none"}} >
+            <ul className="classErrorMessage">
                 {
                     validation.map((e,i) => {
                         return <li key={i} style={{visibility:"visible", listStyle:"none"}}>{e}</li>

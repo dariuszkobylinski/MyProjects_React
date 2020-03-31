@@ -14,7 +14,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name].bundle.js'
+    filename: '[name].kontakt.js'
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
@@ -62,9 +62,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'kontakt.html'),
+      template: path.join(__dirname, 'index.html'),
       hash: true
     }),
     new MiniCssExtractPlugin({filename: "[name].css", chunkFilename: "[id].css"})
   ]
-}
+};

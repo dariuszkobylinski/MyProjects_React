@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let activeMenuElement=document.querySelectorAll(".classLinkHref");
-    // console.log(activeMenuElement);
-    activeMenuElement[3].style.color="darkorange";
 
     let contactBox=document.querySelectorAll(".pClassContactDetail");
     console.log(contactBox);
