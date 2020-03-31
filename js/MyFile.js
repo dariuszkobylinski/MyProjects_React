@@ -2,7 +2,6 @@ import React,{Component, useState, useEffect} from "react";
 import ReactDOM from "react-dom";
 import "../main.scss";
 import "../js/slider_manager";
-// import "../js/kontakt";
 import "../js/main";
 import "../normalize.css";
 
@@ -73,25 +72,56 @@ const Header = () => {
 };
 
 class Footer extends React.Component {
-    // const myChange = () => {
-    //     let z ="";
-    //     if (window.innerWidth<"400") {
-    //         this.st
-    //     }
-    //
-    // };
-    // const myResize = () => {
-    //         window.addEventListener("resize", myChange)
-    //     };
-    //     myResize();
+// const Footer = () => {
 
     constructor() {
     super();
     this.state = {
         fontSize: "26",
         z:"0"
+    };
     }
+
+    componentDidMount() {
+        const myChange = () => {
+        if (parseInt(window.innerWidth)<="370") {
+            console.log(window.innerWidth);
+            this.setState({
+                    z:"-9"
+                }
+            )
+        }
+        else {
+            if((parseInt(window.innerWidth)<"460") && (parseInt(window.innerWidth)>"370")) {
+                console.log(window.innerWidth);
+                this.setState({
+                        z:"-6"
+                    }
+                )
+            }
+            else {
+                console.log(window.innerWidth);
+                this.setState(
+                    {
+                        z:"0"
+                    }
+                )
+            }
+
+        }
+    };
+        const myResize = () => {
+        window.addEventListener("resize", myChange);
+        window.addEventListener("load",myChange);
+
+    };
+        myResize();
     }
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log("update zrobiony");
+        console.log(this.state.z, this.state.fontSize);
+    }
+
     render() {
     return (
         <>
@@ -116,7 +146,7 @@ class Footer extends React.Component {
         </>
     )
 }
-}
+};
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({

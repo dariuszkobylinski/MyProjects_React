@@ -11,7 +11,7 @@ $padding_main: 10px;
   max-width: 100%;
 }
 
-#app {
+.application {
   width: 100%;
 }
 
@@ -924,6 +924,9 @@ body {
   }
   .classErrorMessage {
     margin-top: 5px;
+  }
+  .classBtn_footer {
+    margin-top: 10px;
   }
 
 }
